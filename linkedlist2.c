@@ -1,7 +1,8 @@
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
-struct Node {
+struct Node 
+{
 	int key;
 	struct Node* next;
 };
@@ -15,7 +16,7 @@ void push(struct Node** head_ref, int new_key)
 }
 bool search(struct Node* head, int x)
 {
-	struct Node* current = head; // Initialize current
+	struct Node* current = head;
 	while (current != NULL) {
 		if (current->key == x)
 			return true;
@@ -30,7 +31,7 @@ int main()
 	push(&head, 10);
 	push(&head, 30);
 	push(&head, 11);
-	push(&head, 21);
+	push(&head, 20);
 	push(&head, 14);
 	search(head, 21) ? printf("Yes") : printf("No");
 	return 0;
