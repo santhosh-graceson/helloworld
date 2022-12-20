@@ -1,10 +1,10 @@
-#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdbool.h>
 struct Node 
 {
 	int key;
-	struct Node* next;
+	struct Node* next; 
 };
 void push(struct Node** head_ref, int new_key)
 {
@@ -33,6 +33,7 @@ int main()
 	push(&head, 11);
 	push(&head, 20);
 	push(&head, 14);
+	push(&head, 21);
 	search(head, 21) ? printf("Yes") : printf("No");
 	return 0;
 }
