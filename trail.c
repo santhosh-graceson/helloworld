@@ -1,6 +1,5 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<stdbool.h>
 struct Node
 {
     int data;
@@ -24,9 +23,9 @@ int main()
     third= (struct Node*)malloc(sizeof(struct Node));
     head->data=11;
     head->next=second;
-    second->data=3;
+    second->data=3.8;
     second->next=third;
     third=NULL;
-    printLinkedlist(head);
+    printLinkedlist(second);
 }
 
