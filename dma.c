@@ -5,20 +5,23 @@ int main ()
     int n;
     printf("Enter the value of n:\t");
     scanf("%d",&n);
-    int *a= (long*)(calloc(2*n,sizeof(long)));
+    int *a= (int*)(calloc(2*n,sizeof(int)));
     for (int i=0;i<n;i++)
     {
-        a[i]=a[i+1];
+        a[i]=i+1;
     }
-    for (long i=0;i<n;i++)
+    for (int i=0;i<n;i++)
     {
         printf("%d\t",a[i]);
     }
-    int *b=(int*)realloc(n*2,(sizeof(int)));
+    int *b=(int*)realloc(a,2*n*sizeof(int));
+    printf("Prev address of a is %d and the new address is %d\t",a,b);
     for (int i=0;i<n;i++)
     {
-        a[i]=a[i+1];
-        printf("%d",b[n]);
+        b[i]=i+1;
     }
-    
+     for (int i=0;i<n;i++)
+    {
+        printf("%d\t",b[i]);
+    }
 }
