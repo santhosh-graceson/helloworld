@@ -1,0 +1,30 @@
+#include <stdio.h>
+#define MAX_SIZE 51
+int top=-1;
+int S[MAX_SIZE];
+void push(int a)
+{
+if (top==MAX_SIZE-1)
+printf("The stack has overflown");
+return;
+}
+void pop()
+{
+    int a;
+    top=top-1;
+    S[top]=a;
+}
+void printstack()
+{
+    for (int i=0;i<=top;i++)
+    printf("The Stack of A:\t");
+}
+int main()
+{
+    push(5);printstack();
+    push(1);printstack();
+    push(1);printstack();
+    push(5);printstack();
+    pop();printstack();
+    return 0;
+}
